@@ -26,7 +26,7 @@ function App() {
   const [project2] = useState(require('./Assets/Etch-a-Sketch Color Game.png'));
   const [project4] = useState(require('./Assets/Flames.png'));
   const [project5] = useState(require('./Assets/EverGreen.png'));
-  const [AboutImage] = useState(require('./Assets/HomeImage3.png'));
+  const [AboutImage] = useState(require('./Assets/HomeImage.jpg'));
   const [NavImage] = useState(require('./Assets/Navimg.png'));
 
   const Images = {
