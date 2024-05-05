@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css",
+    "main.js": "/AKILRAJ_N-Portfolio-V4/static/js/main.c0b1817a.js",
+    "index.html": "/AKILRAJ_N-Portfolio-V4/index.html",
+    "main.f157f77a.css.map": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css.map",
+    "main.c0b1817a.js.map": "/AKILRAJ_N-Portfolio-V4/static/js/main.c0b1817a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f157f77a.css",
+    "static/js/main.c0b1817a.js"
+  ]
+}
