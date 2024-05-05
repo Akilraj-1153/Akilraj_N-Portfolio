@@ -5,16 +5,14 @@ import Slider from 'react-slick';
 import { ExternalLink } from 'react-external-link';
 import { IoNavigate } from "react-icons/io5";
 import gsap from 'gsap';
+import ImageContext from '../../Context/ImageContext';
 
 
 function Projects() {
 
     
-    const ProjectImages=[ 
-    './Assets/ROCK PAPER SCISSOR.png',
-    './Assets/SIMPLE CALCULATOR.png',
-    './Assets/Etch-a-Sketch Color Game.png',
-    './Assets/Flames.png',]
+  const Projectphoto=useContext(ImageContext)
+  const ProjectImages=[Projectphoto.project1,Projectphoto.project2,Projectphoto.project3,Projectphoto.project4]
 
   
 

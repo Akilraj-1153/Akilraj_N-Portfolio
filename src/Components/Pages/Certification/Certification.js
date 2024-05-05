@@ -5,18 +5,20 @@ import { useRecoilState } from 'recoil';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Centercertificate } from '../../Atom/atoms';
+import ImageContext from '../../Context/ImageContext';
 
 function Certification() {
 
+    const certificates = useContext(ImageContext);
     const certificateList = [
-        './Assets/Blockchain Basics.jpg',
-        './Assets/Foundations of User Experience (UX) Design.jpg',
-        './Assets/Front End Development - HTML.jpg',
-        './Assets/HTML and CSS in depth.jpg',
-        './Assets/Machine Learning Onramp.jpg',
-        './Assets/MATLAB Onramp.jpg',
-        './Assets/React Basics.jpg',
-        './Assets/UI&UX.jpg',
+        certificates.certificate1,
+        certificates.certificate2,
+        certificates.certificate3,
+        certificates.certificate4,
+        certificates.certificate5,
+        certificates.certificate6,
+        certificates.certificate7,
+        certificates.certificate8,
     ];
 
     const [currentIndex, setCurrentIndex] = useRecoilState(Centercertificate);

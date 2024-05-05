@@ -5,41 +5,31 @@ import { useState } from 'react';
 import { NavState } from '../../Atom/atoms';
 import { useRecoilState } from 'recoil';
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-
+import { useContext } from 'react';
+import ImageContext from '../../Context/ImageContext';
 
 
 
 function Skill() {
   
+  const logos = useContext(ImageContext);
+
+
  
-
-
-  const logos=[
-
-    './Assets/html.png',
-    './Assets/css.png',
-    './Assets/js.png',
-    './Assets/react.png',
-    './Assets/Tailwind.png',
-    './Assets/Gsap.png',
-    './Assets/py.png',
-    './Assets/canva.png',
-
-  ]
   
 
 
   return (
     <div className=' skiilbox h-[90vh] w-full flex justify-center items-center text-white'>
       <div className='grid xs:grid-cols-2  sm:grid-cols-4 lg:grid-cols-4 lg:w-[70%] lg:h-[70%] justify-center items-center w-full h-full max-w-screen'>
-        <SkillItem title="HTML" logo={logos[0]} rating={70} color="bg-[#e54c26]"/>
-        <SkillItem title="CSS" logo={logos[1]} rating={80} color="bg-[#2197f2]" />
-        <SkillItem title="JavaScript" logo={logos[2]} rating={60} color="bg-[#fec44c]"/>
-        <SkillItem title="React Js" logo={logos[3]} rating={60} color="bg-[#39C0D6]" />
-        <SkillItem title="Tailwind CSS" logo={logos[4]} rating={85} color="bg-[#39bdf9]"/>
-        <SkillItem title="GSAP" logo={logos[5]} rating={50}color="bg-[#88ce02]" />
-        <SkillItem title="Python" logo={logos[6]} rating={60} color="bg-gradient-to-br from-blue-900 to-yellow-500"/>
-        <SkillItem title="Canva" logo={logos[7]} rating={70} color="bg-gradient-to-br from-cyan-500 via-blue-700 to-violet-600"/>
+        <SkillItem title="HTML"logo={logos.htmllogo} rating={70} color="bg-[#e54c26]"/>
+        <SkillItem title="CSS" logo={logos.csslogo} rating={80} color="bg-[#2197f2]" />
+        <SkillItem title="JavaScript" logo={logos.jslogo} rating={60} color="bg-[#fec44c]"/>
+        <SkillItem title="React Js" logo={logos.reactlogo} rating={60} color="bg-[#39C0D6]" />
+        <SkillItem title="Tailwind CSS" logo={logos.tailwindlogo} rating={85} color="bg-[#39bdf9]"/>
+        <SkillItem title="GSAP" logo={logos.gsapanimationlogo} rating={50}color="bg-[#88ce02]" />
+        <SkillItem title="Python" logo={logos.pythonlogo} rating={60} color="bg-gradient-to-br from-blue-900 to-yellow-500"/>
+        <SkillItem title="Canva" logo={logos.canvalogo} rating={70} color="bg-gradient-to-br from-cyan-500 via-blue-700 to-violet-600"/>
       </div>
     </div>
   );

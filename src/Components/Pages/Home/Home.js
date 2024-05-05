@@ -3,14 +3,12 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from 'react-external-link';
-
+import ImageContext from '../../Context/ImageContext';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 function Home() {
-
-
-
+  const image = useContext(ImageContext);
 
   useGSAP(()=>{
     const tl= gsap.timeline()
@@ -38,7 +36,7 @@ function Home() {
         <div className='xs:h-full xs:w-full justify-center items-center flex flex-col  '>
 
           <div className='h-[90%] w-auto lg:h-full flex justify-center lg:items-center xs:items-start'>
-            <img className='Homeimg xs:h-[90%] xs:w-auto lg:h-[70%] lg:w-auto rounded-xl' src='./Assets/HomeImage3.png' alt="About" />
+            <img className='Homeimg xs:h-[90%] xs:w-auto lg:h-[70%] lg:w-auto rounded-xl' src={image.AboutImage} alt="About" />
           </div>
           <div className='h-[10%] w-auto  lg:hidden text-white justify-center items-center flex flex-col'>
 

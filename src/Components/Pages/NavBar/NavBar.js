@@ -3,13 +3,14 @@ import { ToogleNavstate,Tooglestate,NavState } from '../../Atom/atoms';
 import { useRecoilState } from 'recoil';
 import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
 import { Link } from 'react-scroll';
-
+import { useContext } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'; 
+import ImageContext from '../../Context/ImageContext';
 
 function NavBar() {
 
- 
+  const Navlogo = useContext(ImageContext);
   const [toogleNavbar, setToggleNavbar] = useRecoilState(Tooglestate);
   const [toogleNavbarState, setToggleNavbarState] = useRecoilState(ToogleNavstate);
   const [activeLink,setActiveLink]=useRecoilState(NavState)
@@ -40,14 +41,14 @@ function NavBar() {
     <div className='h-[7vh] w-full font-mateSc '>
       <div className='h-full w-full gap-10  flex '>
         <div className='h-full md:w-1/5 xs:w-[20%]  '>
-        <img className='navlogo h-full w-auto' src='./Assets/Navimg.png' alt="NavLogo" />
+        <img className='navlogo h-full w-auto' src={Navlogo.NavImage} alt="NavLogo" />
         </div>
 
 
         <div className='h-full w-3/5 mr-10   md:w-4/5 xs:hidden md:flex items-center text-xl gap-16 justify-end'>
           <Link onClick={()=>{ handleactive('home')}} to='home' containerId='contentcontainer' smooth={true} className={`${activeLink === 'home' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Home</Link>
           <Link onClick={()=>{ handleactive('skill')}} to='skill' containerId='contentcontainer' smooth={true}  className={`${activeLink === 'skill' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Skill</Link>
-          <Link onClick={()=>{  handleactive('skill')}} to='project' containerId='contentcontainer' smooth={true}  className={`${activeLink === 'project' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Project</Link>
+          <Link onClick={()=>{  handleactive('project')}} to='project' containerId='contentcontainer' smooth={true}  className={`${activeLink === 'project' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Project</Link>
           <Link onClick={()=>{ handleactive('Certification')}} to='Certification' containerId='contentcontainer' smooth={true} className={`${activeLink === 'Certification' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Certification</Link>
           <Link onClick={()=>{ handleactive('contact')}} to='contact' containerId='contentcontainer' smooth={true}  className={`${activeLink === 'contact' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} navbar cursor-pointer justify-center items-center flex h-[5vh] w-fit p-2`}>Contact</Link>
         </div>
