@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css",
-    "main.js": "/AKILRAJ_N-Portfolio-V4/static/js/main.5b4bf3c9.js",
+    "main.js": "/AKILRAJ_N-Portfolio-V4/static/js/main.57e69fb9.js",
+    "static/media/EverGreen.png": "/AKILRAJ_N-Portfolio-V4/static/media/EverGreen.05c4d30b366469e36cf9.png",
     "static/media/Blockchain Basics.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Blockchain Basics.c83a326f5b32fdce720a.jpg",
     "static/media/Foundations of User Experience (UX) Design.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Foundations of User Experience (UX) Design.a72a3f75c98ca1a5db2d.jpg",
     "static/media/HTML and CSS in depth.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/HTML and CSS in depth.ae2121673a49fcd58b86.jpg",
@@ -26,10 +27,10 @@
     "static/media/css.png": "/AKILRAJ_N-Portfolio-V4/static/media/css.f5219c051595fb1fffbf.png",
     "index.html": "/AKILRAJ_N-Portfolio-V4/index.html",
     "main.f157f77a.css.map": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css.map",
-    "main.5b4bf3c9.js.map": "/AKILRAJ_N-Portfolio-V4/static/js/main.5b4bf3c9.js.map"
+    "main.57e69fb9.js.map": "/AKILRAJ_N-Portfolio-V4/static/js/main.57e69fb9.js.map"
   },
   "entrypoints": [
     "static/css/main.f157f77a.css",
-    "static/js/main.5b4bf3c9.js"
+    "static/js/main.57e69fb9.js"
   ]
 }
