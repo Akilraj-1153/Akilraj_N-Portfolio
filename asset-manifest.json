@@ -1,13 +1,35 @@
 {
   "files": {
     "main.css": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css",
-    "main.js": "/AKILRAJ_N-Portfolio-V4/static/js/main.18a7800d.js",
+    "main.js": "/AKILRAJ_N-Portfolio-V4/static/js/main.5b4bf3c9.js",
+    "static/media/Blockchain Basics.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Blockchain Basics.c83a326f5b32fdce720a.jpg",
+    "static/media/Foundations of User Experience (UX) Design.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Foundations of User Experience (UX) Design.a72a3f75c98ca1a5db2d.jpg",
+    "static/media/HTML and CSS in depth.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/HTML and CSS in depth.ae2121673a49fcd58b86.jpg",
+    "static/media/React Basics.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/React Basics.266f3882b74f8ebabddc.jpg",
+    "static/media/Machine Learning Onramp.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Machine Learning Onramp.7ba6a7de853bb63eba53.jpg",
+    "static/media/MATLAB Onramp.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/MATLAB Onramp.282a49bd77cfebcc12c3.jpg",
+    "static/media/canva.png": "/AKILRAJ_N-Portfolio-V4/static/media/canva.f5adf772b34e1a773b23.png",
+    "static/media/Flames.png": "/AKILRAJ_N-Portfolio-V4/static/media/Flames.60395a8c93341006b1b5.png",
+    "static/media/Front End Development - HTML.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/Front End Development - HTML.410ada01d4afcf97e9a9.jpg",
+    "static/media/Etch-a-Sketch Color Game.png": "/AKILRAJ_N-Portfolio-V4/static/media/Etch-a-Sketch Color Game.da8c4c869549f5fd1e9c.png",
+    "static/media/Gsap.png": "/AKILRAJ_N-Portfolio-V4/static/media/Gsap.1805e8b4970aae157057.png",
+    "static/media/HomeImage3.png": "/AKILRAJ_N-Portfolio-V4/static/media/HomeImage3.4df22b6c52f051ae419c.png",
+    "static/media/UI&UX.jpg": "/AKILRAJ_N-Portfolio-V4/static/media/UI&UX.246c16cbcb8411a6e89d.jpg",
+    "static/media/react.png": "/AKILRAJ_N-Portfolio-V4/static/media/react.c18ea824c2c35d4091e0.png",
+    "static/media/ROCK PAPER SCISSOR.png": "/AKILRAJ_N-Portfolio-V4/static/media/ROCK PAPER SCISSOR.d7a0e16180a7056bc7e6.png",
+    "static/media/py.png": "/AKILRAJ_N-Portfolio-V4/static/media/py.424312ff7c0ceaa5de85.png",
+    "static/media/Navimg.png": "/AKILRAJ_N-Portfolio-V4/static/media/Navimg.11bc86f49e734a4b9563.png",
+    "static/media/html.png": "/AKILRAJ_N-Portfolio-V4/static/media/html.6df5082289a43fc6f329.png",
+    "static/media/Tailwind.png": "/AKILRAJ_N-Portfolio-V4/static/media/Tailwind.4bf17f6432b55c25f210.png",
+    "static/media/js.png": "/AKILRAJ_N-Portfolio-V4/static/media/js.fc12a287e5f56dc8ade0.png",
+    "static/media/SIMPLE CALCULATOR.png": "/AKILRAJ_N-Portfolio-V4/static/media/SIMPLE CALCULATOR.2571cfe8439da24a3991.png",
+    "static/media/css.png": "/AKILRAJ_N-Portfolio-V4/static/media/css.f5219c051595fb1fffbf.png",
     "index.html": "/AKILRAJ_N-Portfolio-V4/index.html",
     "main.f157f77a.css.map": "/AKILRAJ_N-Portfolio-V4/static/css/main.f157f77a.css.map",
-    "main.18a7800d.js.map": "/AKILRAJ_N-Portfolio-V4/static/js/main.18a7800d.js.map"
+    "main.5b4bf3c9.js.map": "/AKILRAJ_N-Portfolio-V4/static/js/main.5b4bf3c9.js.map"
   },
   "entrypoints": [
     "static/css/main.f157f77a.css",
-    "static/js/main.18a7800d.js"
+    "static/js/main.5b4bf3c9.js"
   ]
 }
