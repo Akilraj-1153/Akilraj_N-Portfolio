@@ -22,9 +22,10 @@ function App() {
   const [certificate7] = useState(require('./Assets/React Basics.jpg'));
   const [certificate8] = useState(require('./Assets/UI&UX.jpg'));
   const [project1] = useState(require('./Assets/ROCK PAPER SCISSOR.png'));
-  const [project2] = useState(require('./Assets/SIMPLE CALCULATOR.png'));
-  const [project3] = useState(require('./Assets/Etch-a-Sketch Color Game.png'));
+  const [project3] = useState(require('./Assets/SIMPLE CALCULATOR.png'));
+  const [project2] = useState(require('./Assets/Etch-a-Sketch Color Game.png'));
   const [project4] = useState(require('./Assets/Flames.png'));
+  const [project5] = useState(require('./Assets/EverGreen.png'));
   const [AboutImage] = useState(require('./Assets/HomeImage3.png'));
   const [NavImage] = useState(require('./Assets/Navimg.png'));
 
@@ -50,6 +51,7 @@ function App() {
     project2,
     project3,
     project4,
+    project5,
     AboutImage,
     NavImage
   };

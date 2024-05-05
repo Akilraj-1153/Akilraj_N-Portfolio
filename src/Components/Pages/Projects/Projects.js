@@ -12,7 +12,7 @@ function Projects() {
 
     
   const Projectphoto=useContext(ImageContext)
-  const ProjectImages=[Projectphoto.project1,Projectphoto.project2,Projectphoto.project3,Projectphoto.project4]
+  const ProjectImages=[Projectphoto.project1,Projectphoto.project2,Projectphoto.project3,Projectphoto.project4,Projectphoto.project5]
 
   
 
@@ -31,21 +31,24 @@ function Projects() {
     'Rock paper scissor',
     'Etch-a-Sketch Color Game',
     'SIMPLE CALCULATOR',
-    'FLAMES'
+    'FLAMES',
+    'EverGreen'
   ];
 
   const projDescriptions = [
     'Enjoy a digital twist on the classic Rock, Paper, Scissors game. Crafted with HTML, CSS, and JavaScript, this interactive experience brings timeless fun to your fingertips.',
     'Immerse yourself in nostalgia with our digital Etch-a-Sketch Color Game. Using HTML, CSS, and JavaScript, this game transforms the classic toy into a vibrant canvas, allowing you to draw and paint with a virtual twist.',  
     'Streamline your calculations with our sleek and user-friendly Simple Calculator. Developed using HTML, CSS, and JavaScript, it offers a smooth interface for basic arithmetic, making number crunching a breeze.',
-    'FLAMES is a fun game that predicts the relationship between two people based on the acronym: Friends, Lovers, Affectionate, Marriage, Enemies, Siblings.'
+    'FLAMES is a fun game that predicts the relationship between two people based on the acronym: Friends, Lovers, Affectionate, Marriage, Enemies, Siblings.',
+    "Discover the vibrant spectrum of health benefits offered by our meticulously curated selection of vegetables and fruits at EverGreen."
   ];
 
   const projLinks = [
-    'https://akilraj-1153.github.io/React-js-Rock_paper_scissors/',
-    'https://akilraj-1153.github.io/Odin-Student-Etch-a-Sketch/',
-    'https://akilraj-1153.github.io/Odin-Student-Calculator/',
-    'https://akilraj-1153.github.io/Flames-WebApp-by-AKIL/'
+    'https://akilraj-1153.github.io/Rock_Paper_Scissors/',
+    'https://main--top-etch-a-sketch-akil-1153.netlify.app/',
+    'https://calculator-akil-1153.netlify.app/',
+    'https://akilraj-1153.github.io/Flames_Fun_web_app/',
+    'https://akilraj-1153.github.io/EverGreen/'
   ];
 
 
