@@ -6,9 +6,18 @@ import { ExternalLink } from 'react-external-link';
 import ImageContext from '../../Context/ImageContext';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { IoMdMail } from "react-icons/io";
+import { IoCallSharp } from "react-icons/io5";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { ToogleNavstate,Tooglestate,NavState } from '../../Atom/atoms';
+import { Link } from 'react-scroll';
+import { useRecoilState } from 'recoil';
+
 
 function Home() {
   const image = useContext(ImageContext);
+
+ 
 
   useGSAP(()=>{
     const tl= gsap.timeline()
@@ -22,6 +31,7 @@ function Home() {
 
 
   })
+  
 
   return (
     <div className='h-full  w-full flex xs:flex-col lg:flex-row '>
@@ -30,7 +40,9 @@ function Home() {
         <div className='xs:h-full xs:w-[10%] flex flex-col justify-between sm:hidden'>
           <SocialIcon url='https://www.linkedin.com/in/akilrajn1153' icon={<FaLinkedinIn size={35} color='black' />} />
           <SocialIcon url='https://github.com/Akilraj-1153' icon={<FaGithub size={35} color='black' />} />
-          <SocialIcon url='https://instagram.com/iam_akil_20?igshid=YTQwZjQ0NmI0OA==' icon={<RiInstagramFill size={35} color='black' />} />
+          <SocialIcon url='mailto:akilrajn1153@gmail.com' icon={<IoMdMail  size={35} color='black' />} />
+          <SocialIcon url='tel:+91 9840899656' icon={<IoCallSharp size={35} color='black' />}  />
+          <SocialIcon url='https://wa.me/919840899656' icon={<IoLogoWhatsapp size={35} color='black' />}  />
           <SocialIcon url='https://x.com/Akilraj1153?t=nclAtn7CQGL7vEhqIDB3pA&s=08' icon={<FaXTwitter size={35} color='black' />}  />
         </div>
         <div className='xs:h-full xs:w-full justify-center items-center flex flex-col  '>
@@ -99,7 +111,9 @@ function Home() {
         <div className='lg:h-fit lg:w-full xs:hidden sm:flex justify-center items-center gap-10'>
           <SocialIcon url='https://www.linkedin.com/in/akilrajn1153' icon={<FaLinkedinIn size={35} color='black' />} />
           <SocialIcon url='https://github.com/Akilraj-1153' icon={<FaGithub size={35} color='black' />} />
-          <SocialIcon url='https://instagram.com/iam_akil_20?igshid=YTQwZjQ0NmI0OA==' icon={<RiInstagramFill size={35} color='black' />} />
+          <SocialIcon url='mailto:akilrajn1153@gmail.com' icon={<IoMdMail  size={35} color='black' />} />
+          <SocialIcon url='tel:+91 9840899656' icon={<IoCallSharp size={35} color='black' />}  />
+          <SocialIcon url='https://wa.me/919840899656' icon={<IoLogoWhatsapp size={35} color='black' />}  />
           <SocialIcon url='https://x.com/Akilraj1153?t=nclAtn7CQGL7vEhqIDB3pA&s=08' icon={<FaXTwitter size={35} color='black' />}  />
         </div>
 
@@ -110,9 +124,27 @@ function Home() {
 }
 
 function SocialIcon({ url, icon }) {
+  const [toogleNavbar, setToggleNavbar] = useRecoilState(Tooglestate);
+  const [toogleNavbarState, setToggleNavbarState] = useRecoilState(ToogleNavstate);
+  const [activeLink,setActiveLink]=useRecoilState(NavState)
+  function handleClick(e) {
+    e.preventDefault();
+    if (url.startsWith('mailto')) {
+      window.location.href = url;
+    } else {
+      // Scroll to the contact section
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setToggleNavbar(!toogleNavbar);
+    setToggleNavbarState(!toogleNavbarState);
+  }
+  
   return (
     <ExternalLink href={url}>
-      <div className=' contacticon z-40 h-[7vh]  w-[7vh] border-black border-4 bg-white rounded-xl flex justify-center items-center '>
+      <div className=' contacticon z-40 h-[7vh]  w-[7vh] border-black border-4 bg-white rounded-xl flex justify-center items-center ' onClick={url.startsWith('mailto') ? handleClick : null}>
         {icon}
       </div>
     </ExternalLink>
