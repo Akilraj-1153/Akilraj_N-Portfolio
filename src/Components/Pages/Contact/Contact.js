@@ -68,12 +68,13 @@ function Contact() {
    
 
   return (
-    <div id='' className='h-[90vh] w-full flex flex-col  justify-center items-center overflow-hidden'>
+    <div className='h-[90vh] w-full flex flex-col  justify-center items-center overflow-hidden'>
       <div className=' text-white flex flex-col justify-center items-center p-8 md:w-1/2'>
         <h1 className='contenttext text-3xl mb-4'>Contact Me</h1>
         <div className='flex gap-10 mb-8'>
           <SocialIcon url='https://www.linkedin.com/in/akilrajn1153' icon={<FaLinkedinIn size={35} />} />
           <SocialIcon url='https://github.com/Akilraj-1153' icon={<FaGithub size={35} />} />
+          <SocialIcon url='https://instagram.com/iam_akil_20?igshid=YTQwZjQ0NmI0OA==' icon={<RiInstagramFill size={35} />} />
           <SocialIcon url='https://x.com/Akilraj1153?t=nclAtn7CQGL7vEhqIDB3pA&s=08' icon={<FaXTwitter size={35} />} />
         </div>
       </div>
