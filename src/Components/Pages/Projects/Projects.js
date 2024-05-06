@@ -72,7 +72,7 @@ tl.fromTo('.projectecontainer',{y:100,opacity:0},{y:0,opacity:1})
       
       <Slider  {...settings} >
             {ProjectImages.map((project, index) => (
-          <div className="  justify-start items-center text-white h-[90vh] flex lg:flex-col w-full xs:flex-row">
+          <div className="  justify-start items-center text-white h-[90vh] flex lg:flex-col w-full xs:flex-row " key={index}>
 
               <div className="  w-full h-full flex rounded-lg justify-start items-center flex-col" key={index}>
                 <div className=" w-full xs:h-[40vh] rounded-lg  lg:h-[60vh]  flex justify-center items-center">

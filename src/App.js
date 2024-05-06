@@ -1,7 +1,15 @@
 import React from 'react'
-import Content from './Components/Pages/Content/Content'
 import ImageContext from './Components/Context/ImageContext'
 import { useState } from 'react';
+import Home from './Components/Pages/Home/Home';
+import Contact from './Components/Pages/Contact/Contact';
+import Certification from './Components/Pages/Certification/Certification'
+import Skill from './Components/Pages/Skill/Skill'
+import { useRecoilState } from 'recoil'
+import { NavState } from './Components/Atom/atoms';
+import NavBar from './Components/Pages/NavBar/NavBar'
+import Projects from './Components/Pages/Projects/Projects'
+
 
 function App() {
   const [logo] = useState('./Assets/Logo.png');
@@ -55,10 +63,36 @@ function App() {
     AboutImage,
     NavImage
   };
+
+  const [activeButton, setActiveButton] = useRecoilState(NavState);
+  const handleMouseEnter = (sectionName) => {
+        setActiveButton(sectionName);
+      }
   return (
     <ImageContext.Provider value={Images}>
     <div>
-      <Content></Content>
+    <div className='bg-black text-white h-screen w-screen font-mate'>
+        <div className='h-[7vh] w-full '>
+          <NavBar></NavBar>
+        </div>
+        <div id='contentcontainer' className='h-[93vh] w-full overflow-scroll '>
+          <div name='home' className='h-full w-full' onMouseEnter={() => handleMouseEnter('home')}>
+             <Home></Home>
+          </div>
+          <div name='skill' className='skillcontainer h-full w-full' onMouseEnter={() => handleMouseEnter('skill')}>
+             <Skill></Skill>
+          </div>
+          <div name='project' className='projectecontainer h-full w-full' onMouseEnter={() => handleMouseEnter('project')}>
+             <Projects></Projects>
+          </div>
+          <div name='Certification' className='Certificatecontainer h-full w-full' onMouseEnter={() => handleMouseEnter('Certification')}>
+             <Certification></Certification>
+          </div>
+          <div name='contact' id='contact' className='Contactcontainer h-full w-full' onMouseEnter={() => handleMouseEnter('contact')}>
+             <Contact></Contact>
+          </div>
+        </div>
+      </div>
     </div>
     </ImageContext.Provider>
     

@@ -14,7 +14,7 @@ function NavBar() {
   const [toogleNavbar, setToggleNavbar] = useRecoilState(Tooglestate);
   const [toogleNavbarState, setToggleNavbarState] = useRecoilState(ToogleNavstate);
   const [activeLink,setActiveLink]=useRecoilState(NavState)
-  console.log(activeLink)
+
 
   function handleClick() {
     
@@ -67,7 +67,7 @@ function NavBar() {
         </div>
 
       </div>
-      <div className='absolute md:hidden h-[50vh] w-full'>
+      <div className=' md:hidden h-[50vh] w-full'>
 
       {toogleNavbarState && <div className='absolute z-40 w-full h-fit text-white backdrop-blur text-2xl'>
           <Link onClick={() => { handleClick();  handleactive('home'); }} to='home' containerId='contentcontainer' smooth={true}                   className={`${activeLink === 'home' ? 'text-red-900 focus:text-red-900 ' : 'text-white'} cousor-pointer mr-10 justify-end items-center flex h-[5vh] w-full p-2`}>Home</Link>
