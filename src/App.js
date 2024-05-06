@@ -88,7 +88,7 @@ function App() {
           <div name='Certification' className='Certificatecontainer h-full w-full' onMouseEnter={() => handleMouseEnter('Certification')}>
              <Certification></Certification>
           </div>
-          <div name='contact' id='contact' className='Contactcontainer h-full w-full' onMouseEnter={() => handleMouseEnter('contact')}>
+          <div name='contact' id='contact' className='Contactcontainer h-fit w-full' onMouseEnter={() => handleMouseEnter('contact')}>
              <Contact></Contact>
           </div>
         </div>

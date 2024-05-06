@@ -27,7 +27,9 @@ module.exports = {
       fontFamily:{
         mateSc:["Mate SC, serif"],
         mate:["Mate, serif"],
-        Protest:['Protest Revolution ,sans-serif']
+        Protest:['Protest Revolution ,sans-serif'],
+        Roboto:['Roboto Mono,monospace'],
+
 
       },
     },
