@@ -1,15 +1,14 @@
-import React from 'react'
-import ImageContext from './Components/Context/ImageContext'
+import React from 'react';
 import { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import ImageContext from './Components/Context/ImageContext';
+import { NavState } from './Components/Atom/atoms';
 import Home from './Components/Pages/Home/Home';
 import Contact from './Components/Pages/Contact/Contact';
-import Certification from './Components/Pages/Certification/Certification'
-import Skill from './Components/Pages/Skill/Skill'
-import { useRecoilState } from 'recoil'
-import { NavState } from './Components/Atom/atoms';
-import NavBar from './Components/Pages/NavBar/NavBar'
-import Projects from './Components/Pages/Projects/Projects'
-
+import Certification from './Components/Pages/Certification/Certification';
+import Skill from './Components/Pages/Skill/Skill';
+import NavBar from './Components/Pages/NavBar/NavBar';
+import Projects from './Components/Pages/Projects/Projects';
 
 function App() {
   const [logo] = useState('./Assets/Logo.png');
@@ -21,14 +20,11 @@ function App() {
   const [gsapanimationlogo] = useState(require('./Assets/Gsap.png'));
   const [pythonlogo] = useState(require('./Assets/py.png'));
   const [canvalogo] = useState(require('./Assets/canva.png'));
-  const [certificate1] = useState(require('./Assets/Blockchain Basics.jpg'));
-  const [certificate2] = useState(require('./Assets/Foundations of User Experience (UX) Design.jpg'));
-  const [certificate3] = useState(require('./Assets/Front End Development - HTML.jpg'));
-  const [certificate4] = useState(require('./Assets/HTML and CSS in depth.jpg'));
-  const [certificate5] = useState(require('./Assets/Machine Learning Onramp.jpg'));
-  const [certificate6] = useState(require('./Assets/MATLAB Onramp.jpg'));
-  const [certificate7] = useState(require('./Assets/React Basics.jpg'));
-  const [certificate8] = useState(require('./Assets/UI&UX.jpg'));
+  const [certificate1] = useState(require('./Assets/Foundations of User Experience (UX) Design.jpg'));
+  const [certificate2] = useState(require('./Assets/Front End Development - HTML.jpg'));
+  const [certificate3] = useState(require('./Assets/HTML and CSS in depth.jpg'));
+  const [certificate4] = useState(require('./Assets/React Basics.jpg'));
+  const [certificate5] = useState(require('./Assets/UI&UX.jpg'));
   const [project1] = useState(require('./Assets/ROCK PAPER SCISSOR.png'));
   const [project3] = useState(require('./Assets/SIMPLE CALCULATOR.png'));
   const [project2] = useState(require('./Assets/Etch-a-Sketch Color Game.png'));
@@ -52,9 +48,6 @@ function App() {
     certificate3,
     certificate4,
     certificate5,
-    certificate6,
-    certificate7,
-    certificate8,
     project1,
     project2,
     project3,
@@ -65,38 +58,37 @@ function App() {
   };
 
   const [activeButton, setActiveButton] = useRecoilState(NavState);
+
   const handleMouseEnter = (sectionName) => {
-        setActiveButton(sectionName);
-      }
+    setActiveButton(sectionName);
+  }
+
   return (
     <ImageContext.Provider value={Images}>
-    <div>
-    <div className='bg-black text-white h-screen w-screen font-mate'>
-        <div className='h-[7vh] w-full '>
-          <NavBar></NavBar>
+      <div className='bg-black text-white h-screen w-screen font-mate'>
+        <div className='h-[7vh] w-full'>
+          <NavBar />
         </div>
-        <div id='contentcontainer' className='h-[93vh] w-full overflow-scroll '>
+        <div id='contentcontainer' className='h-[93vh] w-full overflow-scroll'>
           <div name='home' className='h-full w-full' onMouseEnter={() => handleMouseEnter('home')}>
-             <Home></Home>
+            <Home />
           </div>
           <div name='skill' className='skillcontainer h-full w-full' onMouseEnter={() => handleMouseEnter('skill')}>
-             <Skill></Skill>
+            <Skill />
           </div>
           <div name='project' className='projectecontainer h-full w-full' onMouseEnter={() => handleMouseEnter('project')}>
-             <Projects></Projects>
+            <Projects />
           </div>
           <div name='Certification' className='Certificatecontainer h-full w-full' onMouseEnter={() => handleMouseEnter('Certification')}>
-             <Certification></Certification>
+            <Certification />
           </div>
-          <div name='contact' id='contact' className='Contactcontainer h-fit w-full' onMouseEnter={() => handleMouseEnter('contact')}>
-             <Contact></Contact>
+          <div name='contact' id='contactpage' className='Contactcontainer h-fit w-full' onMouseEnter={() => handleMouseEnter('contact')}>
+            <Contact />
           </div>
         </div>
       </div>
-    </div>
     </ImageContext.Provider>
-    
-  )
+  );
 }
 
-export default App
+export default App;

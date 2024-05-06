@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Slider from 'react-slick';
@@ -7,14 +7,15 @@ import { IoNavigate } from "react-icons/io5";
 import gsap from 'gsap';
 import ImageContext from '../../Context/ImageContext';
 
-
 function Projects() {
-
-    
-  const Projectphoto=useContext(ImageContext)
-  const ProjectImages=[Projectphoto.project1,Projectphoto.project2,Projectphoto.project3,Projectphoto.project4,Projectphoto.project5]
-
-  
+  const Projectphoto = useContext(ImageContext);
+  const ProjectImages = [
+    Projectphoto.project1,
+    Projectphoto.project2,
+    Projectphoto.project3,
+    Projectphoto.project4,
+    Projectphoto.project5
+  ];
 
   const settings = {
     dots: false,
@@ -51,49 +52,43 @@ function Projects() {
     'https://akilraj-1153.github.io/EverGreen/'
   ];
 
-
-
-
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    const tl=gsap.timeline({scrollTrigger:{
-            trigger:".projectecontainer",
-            // markers:true,
-            scroller:'#contentcontainer',
-            start:"top center",
-      
-    }
-
-})
-tl.fromTo('.projectecontainer',{y:100,opacity:0},{y:0,opacity:1})
-})
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".projectecontainer",
+        // markers:true,
+        scroller: '#contentcontainer',
+        start: "top center",
+      }
+    });
+    tl.fromTo('.projectecontainer', { y: 100, opacity: 0 }, { y: 0, opacity: 1 });
+  });
 
   return (
-      
-      <Slider  {...settings} >
-            {ProjectImages.map((project, index) => (
-          <div className="  justify-start items-center text-white h-[90vh] flex lg:flex-col w-full xs:flex-row " key={index}>
-
-              <div className="  w-full h-full flex rounded-lg justify-start items-center flex-col" key={index}>
-                <div className=" w-full xs:h-[40vh] rounded-lg  lg:h-[60vh]  flex justify-center items-center">
-                  <img className="h-3/4 w-4/4 p-2 lg:h-full lg:w-[50%] rounded-xl" src={project} alt={`Project ${index}`} />
-                </div>
-                <div className="w-full lg:h-[30vh]  p-2 gap-4 flex justify-start items-center flex-col">
-                  <div id='' className=' flex gap-2 flex flex-col justify-start items-center lg:gap-50'>
-                    <h2 className='text-2xl'>{projTitles[index]}</h2>
-                  <p className=' text-center text-lg w-11/12 mt-5'>{projDescriptions[index]}</p>
-
-                  </div>
-                  <button className='bg-red-600 rounded-lg h-10 w-40 flex flex-row justify-center items-center'><ExternalLink className='w-full flex justify-center items-center flex-row' href={projLinks[index]}><span>Visit the page</span><IoNavigate /></ExternalLink></button>
-
-                </div>
+    <Slider {...settings}>
+      {ProjectImages.map((project, index) => (
+        <div className="justify-start items-center text-white h-[90vh] flex lg:flex-col w-full xs:flex-row " key={index}>
+          <div className="w-full h-full flex rounded-lg justify-start items-center flex-col" key={index}>
+            <div className="w-full xs:h-[40vh] rounded-lg lg:h-[60vh]  flex justify-center items-center">
+              <img className="h-3/4 w-4/4 p-2 lg:h-full lg:w-[50%] rounded-xl" src={project} alt={`Project ${index}`} />
+            </div>
+            <div className="w-full lg:h-[30vh]  p-2 gap-4 flex justify-start items-center flex-col">
+              <div id='' className='flex gap-2 flex flex-col justify-start items-center lg:gap-50'>
+                <h2 className='text-2xl'>{projTitles[index]}</h2>
+                <p className='text-center text-lg w-11/12 mt-5'>{projDescriptions[index]}</p>
               </div>
-      </div>
-
-            ))}
-          </Slider>
- 
-  )
+              <button className='bg-red-600 rounded-lg h-10 w-40 flex flex-row justify-center items-center'>
+                <ExternalLink className='w-full flex justify-center items-center flex-row' href={projLinks[index]}>
+                  <span>Visit the page</span><IoNavigate />
+                </ExternalLink>
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  );
 }
 
-export default Projects
+export default Projects;
