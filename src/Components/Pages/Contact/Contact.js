@@ -33,7 +33,7 @@ function Contact() {
   })
    
   return (
-    <div id='' className='h-[70vh]  w-full flex flex-col  justify-center items-center overflow-hidden'>
+    <div id='' className='h-[90vh]  w-full flex flex-col  justify-center items-center overflow-hidden'>
       <div className=' gap-10 h-full w-full text-white flex flex-col justify-center items-center p-8 md:w-1/2'>
         <h1 className='contenttext text-3xl mb-4'>Contact Me</h1>
         <div className='flex mb-8 gap-20 flex-col w-full justify-center'>
