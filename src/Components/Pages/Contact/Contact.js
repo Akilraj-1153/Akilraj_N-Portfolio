@@ -68,7 +68,7 @@ function Contact() {
    
 
   return (
-    <div className='h-[90vh] w-full flex flex-col  justify-center items-center overflow-hidden'>
+    <div id='' className='h-[90vh] w-full flex flex-col  justify-center items-center overflow-hidden'>
       <div className=' text-white flex flex-col justify-center items-center p-8 md:w-1/2'>
         <h1 className='contenttext text-3xl mb-4'>Contact Me</h1>
         <div className='flex gap-10 mb-8'>
