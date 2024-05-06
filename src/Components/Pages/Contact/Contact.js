@@ -22,7 +22,7 @@ function Contact() {
         trigger:'.Contactcontainer',
         scroller:"#contentcontainer",
         start:"top center+=100",
-        markers:true
+        // markers:true
     }})
 
     tl.fromTo('.contenttext',{y:100,opacity:0},{y:0,opacity:1})
