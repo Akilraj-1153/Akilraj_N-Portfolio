@@ -11,7 +11,7 @@ function Skill() {
   return (
     <div className='skillbox h-[90vh] w-full flex justify-center items-center text-white'>
       <div className='grid xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 lg:w-[70%] lg:h-[70%] justify-center items-center w-full h-full max-w-screen'>
-        <SkillItem title="HTML" logo={logos.htmllogo} rating={70} color="bg-[#e54c26]" />
+        <SkillItem title="HTML" logo={logos.htmllogo} rating={80} color="bg-[#e54c26]" />
         <SkillItem title="CSS" logo={logos.csslogo} rating={80} color="bg-[#2197f2]" />
         <SkillItem title="JavaScript" logo={logos.jslogo} rating={60} color="bg-[#fec44c]" />
         <SkillItem title="React Js" logo={logos.reactlogo} rating={60} color="bg-[#39C0D6]" />
