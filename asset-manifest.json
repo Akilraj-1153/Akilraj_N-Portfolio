@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Akilraj_N-Portfolio/static/css/main.7622ddc9.css",
-    "main.js": "/Akilraj_N-Portfolio/static/js/main.2c78e133.js",
+    "main.js": "/Akilraj_N-Portfolio/static/js/main.7a43d23c.js",
     "static/media/HomeImage.jpg": "/Akilraj_N-Portfolio/static/media/HomeImage.68f9153d9909a483602e.jpg",
     "static/media/EverGreen.png": "/Akilraj_N-Portfolio/static/media/EverGreen.05c4d30b366469e36cf9.png",
     "static/media/Foundations of User Experience (UX) Design.jpg": "/Akilraj_N-Portfolio/static/media/Foundations of User Experience (UX) Design.a72a3f75c98ca1a5db2d.jpg",
@@ -26,10 +26,10 @@
     "static/media/css.png": "/Akilraj_N-Portfolio/static/media/css.f5219c051595fb1fffbf.png",
     "index.html": "/Akilraj_N-Portfolio/index.html",
     "main.7622ddc9.css.map": "/Akilraj_N-Portfolio/static/css/main.7622ddc9.css.map",
-    "main.2c78e133.js.map": "/Akilraj_N-Portfolio/static/js/main.2c78e133.js.map"
+    "main.7a43d23c.js.map": "/Akilraj_N-Portfolio/static/js/main.7a43d23c.js.map"
   },
   "entrypoints": [
     "static/css/main.7622ddc9.css",
-    "static/js/main.2c78e133.js"
+    "static/js/main.7a43d23c.js"
   ]
 }
