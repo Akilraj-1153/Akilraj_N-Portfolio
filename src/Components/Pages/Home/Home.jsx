@@ -77,7 +77,7 @@ function Home({ myimage }) {
             </div>
             <div className='flex'>
               <h1 className='hiText'>I</h1>
-              <span></span>
+              <span className='px-1'></span>
               <h1 className='hiText'>a</h1>
               <h1 className='hiText'>m</h1>
               <span className='px-1'></span>
@@ -142,7 +142,7 @@ function Home({ myimage }) {
           </div>
           <div className='flex text-4xl items-center'>
             <h1 className='hiTextpc'>I</h1>
-            <span></span>
+            <span className='px-1'></span>
             <h1 className='hiTextpc'>a</h1>
             <h1 className='hiTextpc'>m</h1>
             <span className='px-2'></span>
