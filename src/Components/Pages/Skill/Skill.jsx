@@ -2,23 +2,30 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useContext } from 'react';
-import ImageContext from '../../Context/ImageContext';
+import { useState } from 'react';
 
 function Skill() {
-  const logos = useContext(ImageContext);
+  const [htmllogo] = useState(require('../../../Assets/html.png'));
+  const [csslogo] = useState(require('../../../Assets/css.png'));
+  const [jslogo] = useState(require('../../../Assets/js.png'));
+  const [reactlogo] = useState(require('../../../Assets/react.png'));
+  const [tailwindlogo] = useState(require('../../../Assets/Tailwind.png'));
+  const [gsapanimationlogo] = useState(require('../../../Assets/Gsap.png'));
+  const [pythonlogo] = useState(require('../../../Assets/py.png'));
+  const [canvalogo] = useState(require('../../../Assets/canva.png'));
+
 
   return (
     <div className='skillbox h-[90vh] w-full flex justify-center items-center text-white'>
       <div className='grid xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 lg:w-[70%] lg:h-[70%] justify-center items-center w-full h-full max-w-screen'>
-        <SkillItem title="HTML" logo={logos.htmllogo} rating={80} color="bg-[#e54c26]" />
-        <SkillItem title="CSS" logo={logos.csslogo} rating={80} color="bg-[#2197f2]" />
-        <SkillItem title="JavaScript" logo={logos.jslogo} rating={60} color="bg-[#fec44c]" />
-        <SkillItem title="React Js" logo={logos.reactlogo} rating={60} color="bg-[#39C0D6]" />
-        <SkillItem title="Tailwind CSS" logo={logos.tailwindlogo} rating={85} color="bg-[#39bdf9]" />
-        <SkillItem title="GSAP" logo={logos.gsapanimationlogo} rating={50} color="bg-[#88ce02]" />
-        <SkillItem title="Python" logo={logos.pythonlogo} rating={60} color="bg-gradient-to-br from-blue-900 to-yellow-500" />
-        <SkillItem title="Canva" logo={logos.canvalogo} rating={70} color="bg-gradient-to-br from-cyan-500 via-blue-700 to-violet-600" />
+        <SkillItem title="HTML" logo={htmllogo} rating={80} color="bg-[#e54c26]" />
+        <SkillItem title="CSS" logo={csslogo} rating={80} color="bg-[#2197f2]" />
+        <SkillItem title="JavaScript" logo={jslogo} rating={60} color="bg-[#fec44c]" />
+        <SkillItem title="React Js" logo={reactlogo} rating={60} color="bg-[#39C0D6]" />
+        <SkillItem title="Tailwind CSS" logo={tailwindlogo} rating={85} color="bg-[#39bdf9]" />
+        <SkillItem title="GSAP" logo={gsapanimationlogo} rating={50} color="bg-[#88ce02]" />
+        <SkillItem title="Python" logo={pythonlogo} rating={60} color="bg-gradient-to-br from-blue-900 to-yellow-500" />
+        <SkillItem title="Canva" logo={canvalogo} rating={70} color="bg-gradient-to-br from-cyan-500 via-blue-700 to-violet-600" />
       </div>
     </div>
   );

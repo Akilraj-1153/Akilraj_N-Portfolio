@@ -1,20 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useContext } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRecoilState } from 'recoil';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Centercertificate } from '../../Atom/atoms';
-import ImageContext from '../../Context/ImageContext';
+import { Centercertificate } from '../..//Atom/atoms';
 
 function Certification() {
-    const certificates = useContext(ImageContext);
+
+    const [certificate1] = useState(require('../../../Assets/Foundations of User Experience (UX) Design.jpg'));
+    const [certificate2] = useState(require('../../../Assets/Front End Development - HTML.jpg'));
+    const [certificate3] = useState(require('../../../Assets/HTML and CSS in depth.jpg'));
+    const [certificate4] = useState(require('../../../Assets/React Basics.jpg'));
+    const [certificate5] = useState(require('../../../Assets/UI&UX.jpg'));
+
+
+
     const certificateList = [
-        certificates.certificate1,
-        certificates.certificate2,
-        certificates.certificate3,
-        certificates.certificate4,
-        certificates.certificate5,
+        certificate1,
+        certificate2,
+        certificate3,
+        certificate4,
+        certificate5,
     ];
 
     const [currentIndex, setCurrentIndex] = useRecoilState(Centercertificate);
@@ -62,7 +68,7 @@ function Certification() {
     });
 
     return (
-        <div className='h-[90vh]  w-[full] flex xs:flex-col md:flex-row md:justify-center items-center   overflow-hidden'>
+        <div className='h-[90vh] w-[full] flex xs:flex-col  md:flex-row justify-center items-center   overflow-hidden'>
             <div ref={(el) => (boxRefs.current[prevIndex] = el)} className=' box1 xs:h-[30%] lg:z-40  xs:w-full md:h-[30%] md:w-1/4 opacity-50 rounded-md flex justify-center items-center flex-col'>
                 <img className='h-full w-auto rounded-xl cursor-pointer ' src={certificateList[prevIndex]} alt={`Certificate ${prevIndex + 1}`} onMouseEnter={() => setAutoUpdate(false)} onMouseLeave={() => setAutoUpdate(true)} onClick={() => navigateToIndex(prevIndex)} />
             </div>
