@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Akilraj_N-Portfolio/static/css/main.3006579d.css",
-    "main.js": "/Akilraj_N-Portfolio/static/js/main.dd721a0a.js",
+    "main.css": "/Akilraj_N-Portfolio/static/css/main.7622ddc9.css",
+    "main.js": "/Akilraj_N-Portfolio/static/js/main.2c78e133.js",
     "static/media/HomeImage.jpg": "/Akilraj_N-Portfolio/static/media/HomeImage.68f9153d9909a483602e.jpg",
     "static/media/EverGreen.png": "/Akilraj_N-Portfolio/static/media/EverGreen.05c4d30b366469e36cf9.png",
     "static/media/Foundations of User Experience (UX) Design.jpg": "/Akilraj_N-Portfolio/static/media/Foundations of User Experience (UX) Design.a72a3f75c98ca1a5db2d.jpg",
@@ -14,6 +14,8 @@
     "static/media/Gsap.png": "/Akilraj_N-Portfolio/static/media/Gsap.1805e8b4970aae157057.png",
     "static/media/UI&UX.jpg": "/Akilraj_N-Portfolio/static/media/UI&UX.246c16cbcb8411a6e89d.jpg",
     "static/media/react.png": "/Akilraj_N-Portfolio/static/media/react.c18ea824c2c35d4091e0.png",
+    "static/media/PGHT-Web.png": "/Akilraj_N-Portfolio/static/media/PGHT-Web.543d534f2d2e39d8a9df.png",
+    "static/media/PGHT-TAURI.png": "/Akilraj_N-Portfolio/static/media/PGHT-TAURI.d497da792e3e5a4d3a40.png",
     "static/media/ROCK PAPER SCISSOR.png": "/Akilraj_N-Portfolio/static/media/ROCK PAPER SCISSOR.d7a0e16180a7056bc7e6.png",
     "static/media/py.png": "/Akilraj_N-Portfolio/static/media/py.424312ff7c0ceaa5de85.png",
     "static/media/Navimg.png": "/Akilraj_N-Portfolio/static/media/Navimg.11bc86f49e734a4b9563.png",
@@ -23,11 +25,11 @@
     "static/media/SIMPLE CALCULATOR.png": "/Akilraj_N-Portfolio/static/media/SIMPLE CALCULATOR.2571cfe8439da24a3991.png",
     "static/media/css.png": "/Akilraj_N-Portfolio/static/media/css.f5219c051595fb1fffbf.png",
     "index.html": "/Akilraj_N-Portfolio/index.html",
-    "main.3006579d.css.map": "/Akilraj_N-Portfolio/static/css/main.3006579d.css.map",
-    "main.dd721a0a.js.map": "/Akilraj_N-Portfolio/static/js/main.dd721a0a.js.map"
+    "main.7622ddc9.css.map": "/Akilraj_N-Portfolio/static/css/main.7622ddc9.css.map",
+    "main.2c78e133.js.map": "/Akilraj_N-Portfolio/static/js/main.2c78e133.js.map"
   },
   "entrypoints": [
-    "static/css/main.3006579d.css",
-    "static/js/main.dd721a0a.js"
+    "static/css/main.7622ddc9.css",
+    "static/js/main.2c78e133.js"
   ]
 }
