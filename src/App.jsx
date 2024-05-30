@@ -16,15 +16,15 @@ function App() {
   
 
 
-  const [activeButton, setActiveButton] = useRecoilState(NavState);
+  const [activeLink, setActiveLink] = useRecoilState(NavState);
+
 
   const handleMouseEnter = (sectionName) => {
-    setActiveButton(sectionName);
+    setActiveLink(sectionName);
   }
 
 
   return (
-  <RecoilRoot>
 
       <div className='fullcontainer h-screen w-screen gap-2 flex flex-col overflow-hidden  bg-gradient-to-br from-slate-900 to-slate-500'>
         <div className='navbarcontainer h-[8vh] w-full p-1 rounded-lg '>
@@ -35,16 +35,15 @@ function App() {
           <Home myimage={myPhoto}></Home>
 
           </div>
-          <div name='skill' className='skillcontainer h-full w-full' onMouseEnter={() => handleMouseEnter('skill')}>
+          <div name='skill' className='skillcontainer' onMouseEnter={() => handleMouseEnter('skill')}>
             <Skill />
           </div>
-          <div name='project' className='projectecontainer r' onMouseEnter={() => handleMouseEnter('project')}>
+          <div name='project' className='projectecontainer' onMouseEnter={() => handleMouseEnter('project')}>
           <Projects></Projects>
 
           <div name='Certification' className='Certificatecontainer' onMouseEnter={() => handleMouseEnter('Certification')}>
             <Certification />
           </div>
-
           </div>
           <div name='contact' id='contactpage' className='Contactcontainer ' onMouseEnter={() => handleMouseEnter('contact')}>
           <Contact></Contact>
@@ -52,7 +51,6 @@ function App() {
           </div>
         </div>
       </div>
-  </RecoilRoot>
 
   )
 }
