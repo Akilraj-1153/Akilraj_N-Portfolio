@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://yourusername.github.io/yourrepository/sitemap.xml
+Sitemap: https://github.com/Akilraj-1153/Akilraj_N-Portfolio/blob/main/sitemap.xml
