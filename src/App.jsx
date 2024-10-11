@@ -49,7 +49,9 @@ const App = () => {
       }}
     >
       <div
-        className={`h-screen w-screen flex overflow-hidden font-GowunBatang transition-all duration-500`}
+        className={`h-screen w-screen flex overflow-hidden font-GowunBatang transition duration-500 ease-in-out ${
+          isDarkTheme ? "bg-[#121212]" : "bg-[#f9fafb]"
+        } `}
       >
         {currentNavBtn !== "home" && (
           <motion.div
