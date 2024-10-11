@@ -167,7 +167,7 @@ export const certificate_data = [
     image: certificate1,
     description:
       "This certification covers the principles of user experience design, including user research and usability testing. You'll learn to create user-centered designs that enhance user satisfaction.",
-    link: "http://link-to-certification1.com",
+    link: "https://coursera.org/share/0b3381e520d095643c9f601797d3a2ae",
   },
   {
     title: "HTML and CSS in Depth",
@@ -177,7 +177,7 @@ export const certificate_data = [
     image: certificate2,
     description:
       "Delve deeper into HTML and CSS to create visually appealing and responsive websites. This certification focuses on layout techniques, Flexbox, and Grid.",
-    link: "http://link-to-certification3.com",
+    link: "https://coursera.org/share/4da91eb9e80d1b22cc5ea75cf11d57bb",
   },
   {
     title: "React Basics",
@@ -187,6 +187,6 @@ export const certificate_data = [
     image: certificate3,
     description:
       "Learn the fundamentals of React, a popular JavaScript library for building user interfaces. This course covers components, state management, and lifecycle methods.",
-    link: "http://link-to-certification4.com",
+    link: "https://coursera.org/share/aa5047b4dcc36e0be8ce5f018e7985a3",
   },
 ];
