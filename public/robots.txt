@@ -1,4 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-Sitemap: https://github.com/Akilraj-1153/Akilraj_N-Portfolio/blob/main/sitemap.xml
