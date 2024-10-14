@@ -1,48 +1,113 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Profilephoto from "../assets/Image/ProfileImg.jpg";
-import { NavContext } from "../App";
+import { PortfolioContext } from "../App";
 import { Link } from "react-scroll";
 import { ExternalLink } from "react-external-link";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { Name } from "./MiniComponents";
+
 const Profile = () => {
-  const { setCurrentNavBtn, isDarkTheme } = useContext(NavContext);
+  const { setCurrentNavBtn, isDarkTheme } = useContext(PortfolioContext);
 
   const handleSetActive = (to) => {
     setCurrentNavBtn(to);
   };
 
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 15 },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
+  };
+
   return (
-    <div
-      className={`w-full h-full transition-all duration-500 rounded-lg  flex flex-col lg:items-center lg:justify-center ${
+    <motion.div
+      ref={ref}
+      className={`w-full h-full transition-all duration-500 rounded-lg flex flex-col lg:items-center lg:justify-center ${
         isDarkTheme ? "text-white" : "text-black"
       }`}
+      variants={containerVariants}
+      initial="hidden"
+      animate={controls}
     >
-      <div className="pt-0 py-6 md:pt-6 flex justify-center items-center">
+      <motion.div
+        className="ImageContainer pt-0 py-6 md:pt-6 flex justify-center items-center"
+        variants={itemVariants}
+      >
         <img
           src={Profilephoto}
           className="profileImg max-h-64 w-auto rounded-lg shadow"
           alt="Profile"
         />
-      </div>
-      <div className="text-center mb-2">
-        <h2 className="greetingtext text-xl font-semibold">Hello, I am</h2>
-        <div className="logo py-2 px-4 flex justify-center">
-          <Name isDarkTheme={isDarkTheme} height={"h-20"} />
-        </div>
-      </div>
-      <p className="profileText text-md text-justify leading-relaxed px-4 mb-4">
-        Dedicated <span className="font-bold text-xl">Software Developer</span>{" "}
-        with a B.Tech in Artificial Intelligence and Data Science, experienced in crafting efficient
-        software solutions. Proficient in React, Python, and JavaScript,
-        focusing on performance optimization and user experience. A
-        collaborative team player committed to delivering impactful projects.
-      </p>
+      </motion.div>
 
-      <div className="p-4 flex gap-4 justify-center">
+      <div className="text-center mb-2">
+        <motion.h2
+          className="greetingtext text-xl font-semibold"
+          variants={itemVariants}
+        >
+          Hello, I am
+        </motion.h2>
+        <motion.div
+          className="logo py-2 px-4 flex justify-center"
+          variants={itemVariants}
+        >
+          <Name isDarkTheme={isDarkTheme} height="h-20" />
+        </motion.div>
+      </div>
+
+      <motion.p
+        className="profileText text-md text-justify leading-relaxed px-4 mb-4"
+        variants={itemVariants}
+      >
+        Dedicated <span className="font-bold text-xl">Software Developer</span>{" "}
+        with a B.Tech in Artificial Intelligence and Data Science, experienced
+        in crafting efficient software solutions. Proficient in React, Python,
+        and JavaScript, focusing on performance optimization and user
+        experience. A collaborative team player committed to delivering
+        impactful projects.
+      </motion.p>
+
+      <motion.div
+        className="p-4 flex gap-4 justify-center"
+        variants={containerVariants}
+      >
         <motion.button
+          className="profilebtn"
+          variants={buttonVariants}
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <Link
             key="contact"
@@ -62,8 +127,9 @@ const Profile = () => {
         </motion.button>
 
         <motion.button
+          className="profilebtn"
+          variants={buttonVariants}
           whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <ExternalLink
             href="https://drive.google.com/file/d/1T47MUifNCWdSsgKNo5mvA8w6wiNP9_Am/view?usp=sharing"
@@ -76,8 +142,8 @@ const Profile = () => {
             <span>Resume</span>
           </ExternalLink>
         </motion.button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -1,20 +1,19 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
-import { Menu, NavButtons } from "./MiniComponents";
+import { Menu, NavButtons, Name } from "./MiniComponents";
 import MoonIcon from "../assets/SVG/Others/Moon.svg";
 import SunIcon from "../assets/SVG/Others/Sun.svg";
-import { NavContext } from "../App";
 import { NavBar_data } from "./Data";
-import { Name } from "./MiniComponents";
+import { PortfolioContext } from "../App";
 
 const NavBar = ({ onHeightChange }) => {
   const navbarRef = useRef();
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  const { currentNavBtn, setCurrentNavBtn, isDarkTheme, setisDarkTheme } =
-    useContext(NavContext);
+  const { currentNavBtn, setCurrentNavBtn, isDarkTheme, setIsDarkTheme } =
+    useContext(PortfolioContext);
 
-  const handleToogleTheme = () => {
+  const handleToggleTheme = () => {
     const newTheme = !isDarkTheme;
-    setisDarkTheme(newTheme);
+    setIsDarkTheme(newTheme);
     localStorage.setItem("PortfolioDarkTheme", JSON.stringify(newTheme));
   };
 
@@ -41,11 +40,11 @@ const NavBar = ({ onHeightChange }) => {
             />
           ))}
         </div>
-        <div className="flex items-center ">
-          <div onClick={handleToogleTheme} className="px-4">
+        <div className="flex items-center">
+          <div onClick={handleToggleTheme} className="px-4">
             <img
               src={isDarkTheme ? SunIcon : MoonIcon}
-              className="h-10 w-10 absolute top-4 md:right-4  md:top-1 right-14 cursor-pointer transition duration-500"
+              className="h-10 w-10 absolute top-4 md:right-4 md:top-1 right-14 cursor-pointer transition duration-500"
               alt="Theme Toggle"
             />
           </div>

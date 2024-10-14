@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
-import { motion } from "framer-motion";
-import { NavContext } from "../App";
+import React from "react";
+import { useContext } from "react";
+import { PortfolioContext } from "../App";
 import Profile from "./Profile";
 
 const Home = () => {
-  const {setCurrentNavBtn } = useContext(NavContext);
-
+  const { NavBarHeight } = useContext(PortfolioContext);
   return (
-    <motion.div
-      onViewportEnter={() => setCurrentNavBtn("home")}
-      viewport={{ once: false, amount: 0.1 }}
-      className="min-h-full max-w-xl"
+    <div
+      className={`flex justify-center`}
+      style={{ minHeight: `calc(100vh - ${NavBarHeight}px)` }}
     >
-      <Profile />
-    </motion.div>
+      <div className="flex  flex-1 max-w-xl">
+        <Profile></Profile>
+      </div>
+    </div>
   );
 };
 

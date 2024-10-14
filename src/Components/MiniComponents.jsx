@@ -65,21 +65,28 @@ export const NavButtons = ({
 }) => {
   const handleSetActive = (to) => {
     setCurrentNavBtn(to);
-    console.log(`Navigating to ${to}`);
+  };
+
+  const toggleMenu = () => {
+    if (setIsMobileNavOpen) {
+      setIsMobileNavOpen(false);
+    }
   };
 
   return (
     <Link
       containerId="MainContainer"
       key={navItem.name}
-      activeClass="active"
       to={navItem.name}
       spy={true}
       onSetActive={handleSetActive}
-      onClick={setIsMobileNavOpen ? () => setIsMobileNavOpen(false) : null}
+      onClick={() => {
+        handleSetActive(navItem.name);
+        toggleMenu();
+      }}
       className={`capitalize text-md cursor-pointer pb-2 transition-colors duration-500  ${
         currentNavBtn === navItem.name
-          ? `active border-b-2 ${
+          ? ` border-b-2 ${
               isDarkTheme
                 ? "border-white text-white"
                 : "border-black text-black"
