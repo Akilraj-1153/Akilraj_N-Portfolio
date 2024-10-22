@@ -19,7 +19,7 @@ import JsLogo from "../assets/SVG/Tech Icons/JavaScript.svg";
 import ReactLogo from "../assets/SVG/Tech Icons/ReactJS.svg";
 import TailwindLogo from "../assets/SVG/Tech Icons/TailwindCSS.svg";
 import GitLogo from "../assets/SVG/Tech Icons/Git.svg";
-import PythonLogo from "../assets/SVG/Tech Icons/Python.svg";
+import JavaLogo from "../assets/SVG/Tech Icons/Java.svg";
 import CanvaLogo from "../assets/SVG/Tech Icons/Canva.svg";
 import GsapLogo from "../assets/SVG/Tech Icons/GSAP2.svg";
 import TauriLogo from "../assets/SVG/Tech Icons/Tauri.svg";
@@ -39,16 +39,16 @@ export const NavBar_data = [
 export const skill_data = [
   { name: "HTML5", icon: HtmlLogo },
   { name: "CSS3", icon: CssLogo },
+  { name: "Tailwind CSS", icon: TailwindLogo },
   { name: "JavaScript", icon: JsLogo },
   { name: "ReactJS", icon: ReactLogo },
-  { name: "Tailwind CSS", icon: TailwindLogo },
+  { name: "GSAP", icon: GsapLogo },
+  { name: "Framer", Component: FramerIcon },
+  { name: "Java", icon: JavaLogo },
+  { name: "Tauri", icon: TauriLogo },
   { name: "Git", icon: GitLogo },
   { name: "GitHub", Component: GitHubSkillIcon },
-  { name: "Python", icon: PythonLogo },
-  { name: "Tauri", icon: TauriLogo },
-  { name: "Framer", Component: FramerIcon },
   { name: "Canva", icon: CanvaLogo },
-  { name: "GSAP", icon: GsapLogo },
 ];
 
 export const projects_data = [

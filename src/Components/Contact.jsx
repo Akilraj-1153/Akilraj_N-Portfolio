@@ -116,7 +116,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <hr />
 
           {/* Form */}
           <motion.div

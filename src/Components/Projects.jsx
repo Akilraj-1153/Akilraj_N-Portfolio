@@ -36,7 +36,7 @@ const Projects = () => {
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}
-              className={`max-w-4xl shadow-2xl rounded-lg flex flex-col items-center
+              className={`max-w-4xl shadow-2xl rounded-lg flex flex-col items-center duration-500 transition-colors
                 ${
                   isDarkTheme
                     ? "bg-[#1E1E1E] text-white"

@@ -67,10 +67,10 @@ const Profile = () => {
         variants={itemVariants}
       >
         <img
-          src={Profilephoto}
-          className="profileImg max-h-64 w-auto rounded-lg shadow"
+        
+        className="profileImg max-h-64 w-auto rounded-lg shadow"
           alt="Profile"
-        />
+        src="https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Image/ProfileImg.jpg" />
       </motion.div>
 
       <div className="text-center mb-2">
@@ -94,8 +94,8 @@ const Profile = () => {
       >
         Dedicated <span className="font-bold text-xl">Software Developer</span>{" "}
         with a B.Tech in Artificial Intelligence and Data Science, experienced
-        in crafting efficient software solutions. Proficient in React, Python,
-        and JavaScript, focusing on performance optimization and user
+        in crafting efficient software solutions. Proficient in React Js, JavaScript,
+        and Java, focusing on performance optimization and user
         experience. A collaborative team player committed to delivering
         impactful projects.
       </motion.p>
