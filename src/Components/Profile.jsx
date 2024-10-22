@@ -131,7 +131,7 @@ const Profile = () => {
           whileHover={{ scale: 1.1 }}
         >
           <ExternalLink
-            href="https://drive.google.com/file/d/1T47MUifNCWdSsgKNo5mvA8w6wiNP9_Am/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JrG7djOmnSRvgwrbvTZt80UdCgZEGxWS/view?usp=sharing"
             className={`capitalize cursor-pointer h-fit text-center px-6 py-2 rounded-lg text-lg font-semibold border ${isDarkTheme
                 ? "bg-[#121212] text-white border-white"
                 : "bg-white text-black border-black"
