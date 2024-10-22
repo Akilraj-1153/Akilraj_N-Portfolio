@@ -164,6 +164,7 @@ export const certificate_data = [
     issuedBy: "Google via Coursera",
     date: "Month Year 1",
     logo: "path/to/logo1.png",
+    ImageLink:"https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Certification/Foundations of User Experience (UX) Design.jpg",
     image: certificate1,
     description:
       "This certification covers the principles of user experience design, including user research and usability testing. You'll learn to create user-centered designs that enhance user satisfaction.",
@@ -174,6 +175,7 @@ export const certificate_data = [
     issuedBy: "Meta via Coursera",
     date: "Month Year 3",
     logo: "path/to/logo3.png",
+    ImageLink:"https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Certification/HTML and CSS in depth.jpg",
     image: certificate2,
     description:
       "Delve deeper into HTML and CSS to create visually appealing and responsive websites. This certification focuses on layout techniques, Flexbox, and Grid.",
@@ -184,6 +186,7 @@ export const certificate_data = [
     issuedBy: "Meta via Coursera",
     date: "Month Year 4",
     logo: "path/to/logo4.png",
+    ImageLink:"https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Certification/React Basics.jpg",
     image: certificate3,
     description:
       "Learn the fundamentals of React, a popular JavaScript library for building user interfaces. This course covers components, state management, and lifecycle methods.",

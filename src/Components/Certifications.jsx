@@ -12,14 +12,21 @@ const Certifications = () => {
 
   useEffect(() => {
     if (isInView) {
-      animate([
-        [scope.current, { opacity: 1 }],
-        [
-          ".certificationbox",
-          { opacity: 1, scale: 1 },
-          { delay: stagger(0.3, { from: "center" }) },
-        ],
-      ]);
+      animate(
+        scope.current,
+        { opacity: 1 }, // Animation for the main element
+        { duration: 0.5 } // Adjust the duration as needed
+      );
+  
+      animate(
+        ".certificationbox",
+        { opacity: 1, scale: 0.95 }, // Animation for certification boxes
+        {
+          delay: stagger(0.3, { startDelay: 0.2, from: "first" }), // Adding stagger delay from the center
+          duration: 0.5, // Duration for each element animation
+          ease:"easeIn"
+        }
+      );
     }
   }, [isInView]);
 
@@ -40,11 +47,11 @@ const Certifications = () => {
             {certificate_data.map((certificateItem, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 0.95 }}
+                whileHover={{ scale: 1 }}
                 className={`certificationbox shadow-2xl transition-all duration-500 pb-6 max-w-sm p-2 rounded-lg flex gap-2 flex-col items-center justify-between ${
                   isDarkTheme ? "bg-[#1E1E1E] text-white" : "bg-white text-black"
                 }`}
-                initial={{ opacity: 0, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
               >
                 <div className="flex flex-col">
                   <motion.img

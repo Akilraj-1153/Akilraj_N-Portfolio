@@ -55,9 +55,8 @@ const Profile = () => {
   return (
     <motion.div
       ref={ref}
-      className={`w-full h-full transition-all duration-500 rounded-lg flex flex-col lg:items-center lg:justify-center ${
-        isDarkTheme ? "text-white" : "text-black"
-      }`}
+      className={`w-full h-full transition-all duration-500 rounded-lg flex flex-col lg:items-center lg:justify-center ${isDarkTheme ? "text-white" : "text-black"
+        }`}
       variants={containerVariants}
       initial="hidden"
       animate={controls}
@@ -67,10 +66,11 @@ const Profile = () => {
         variants={itemVariants}
       >
         <img
-        
-        className="profileImg max-h-64 w-auto rounded-lg shadow"
+
+          className="profileImg max-h-64 w-auto rounded-lg shadow"
+          loading="lazy"
           alt="Profile"
-        src="https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Image/ProfileImg.jpg" />
+          src="https://cdn.jsdelivr.net/gh/Akilraj-1153/Akilraj_N-Portfolio/src/Assets/Image/ProfileImg.jpg" />
       </motion.div>
 
       <div className="text-center mb-2">
@@ -115,11 +115,10 @@ const Profile = () => {
             spy={true}
             to="contact"
             containerId="MainContainer"
-            className={`capitalize cursor-pointer h-fit text-center px-6 py-2 rounded-lg text-lg font-semibold border ${
-              isDarkTheme
+            className={`capitalize cursor-pointer h-fit text-center px-6 py-2 rounded-lg text-lg font-semibold border ${isDarkTheme
                 ? "bg-white text-black border-white"
                 : "bg-[#121212] text-white border-black"
-            } transition-colors duration-500`}
+              } transition-colors duration-500`}
             onSetActive={handleSetActive}
           >
             <span>Contact</span>
@@ -133,11 +132,10 @@ const Profile = () => {
         >
           <ExternalLink
             href="https://drive.google.com/file/d/1T47MUifNCWdSsgKNo5mvA8w6wiNP9_Am/view?usp=sharing"
-            className={`capitalize cursor-pointer h-fit text-center px-6 py-2 rounded-lg text-lg font-semibold border ${
-              isDarkTheme
+            className={`capitalize cursor-pointer h-fit text-center px-6 py-2 rounded-lg text-lg font-semibold border ${isDarkTheme
                 ? "bg-[#121212] text-white border-white"
                 : "bg-white text-black border-black"
-            } transition-colors duration-500`}
+              } transition-colors duration-500`}
           >
             <span>Resume</span>
           </ExternalLink>
