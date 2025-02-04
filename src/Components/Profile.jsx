@@ -55,7 +55,7 @@ const Profile = () => {
   return (
     <motion.div
       ref={ref}
-      className={`w-full h-full transition-all duration-500 rounded-lg flex flex-col lg:items-center lg:justify-center ${isDarkTheme ? "text-white" : "text-black"
+      className={`w-full h-full transition-all duration-500 rounded-lg flex flex-col lg:items-center  ${isDarkTheme ? "text-white" : "text-black"
         }`}
       variants={containerVariants}
       initial="hidden"
